@@ -15,3 +15,6 @@ Social\:\s\d{3}\.?\s?\-?\*?\=?\_?\d{2}\.?\s?\-?\*?\=?\_?\d{4}
 
 If the social "prefix" will not be utilized or can't be read, I would recommend the space attribute (\s) has a requirement of 1 if no other symbols are observed.
 \d{3}[\*\-\_\=\+\.\s]\d{2}[\*\-\_\=\+\.\s]\d{4}
+
+
+This regex's have been validated as functional on: https://regexr.com/
