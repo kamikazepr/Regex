@@ -1,0 +1,17 @@
+High capture rate but also high false positive.  The regex is intended to capture several permutations of how an US social security number can be inserted by a customer.
+However, since symbols and spaces are not required this will also trigger on a 9-digit numerical sequence, we recommend this follows the field of the ssn entry:
+code:
+\d{3}[\*\-\_\=\+\.\s]?\d{2}[\*\-\_\=\+\.\s]?\d{4}
+or
+\d{3}\.?\s?\-?\*?\=?\_?\d{2}\.?\s?\-?\*?\=?\_?\d{4}
+
+*note: Even though the utilization of "any of ' [ ]' " is cleaner; some security tools experience difficulties reading this parameters.  Other parameters that tend to be difficult are "or statements |"
+
+
+Example:
+ssn\:\s\d{3}\.?\s?\-?\*?\=?\_?\d{2}\.?\s?\-?\*?\=?\_?\d{4}
+or
+Social\:\s\d{3}\.?\s?\-?\*?\=?\_?\d{2}\.?\s?\-?\*?\=?\_?\d{4}
+
+If the social "prefix" will not be utilized or can't be read, I would recommend the space attribute (\s) has a requirement of 1 if no other symbols are observed.
+\d{3}[\*\-\_\=\+\.\s]\d{2}[\*\-\_\=\+\.\s]\d{4}
