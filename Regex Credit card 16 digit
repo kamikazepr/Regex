@@ -1,0 +1,5 @@
+code:
+\d{4}[\*\-\_\=\+\.\s]\d{4}[\*\-\_\=\+\.\s]\d{4}[\*\-\_\=\+\.\s]\d{4}
+or
+\d{4}\.?\s?\-?\*?\=?\_?\d{4}\.?\s?\-?\*?\=?\_?\d{4}\.?\s?\-?\*?\=?\_?\d{4}
+*note: Even though the utilization of "any of ' [ ]' " is cleaner; some security tools experience difficulties reading this parameters.  Other parameters that tend to be difficult are "or statements |"
